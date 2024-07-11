@@ -14,8 +14,8 @@
                 <div class="d-flex">
                     <a class="nav-link" href="<?= URLUTAMA; ?>">Home</a>
                     <a class="nav-link" href="<?= URLUTAMA; ?>/buku">Buku</a>
-                    <a class="nav-link" href="#">About</a>
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="<?= URLUTAMA; ?>/about">About</a>
+                    <a class="nav-link" href="<?= URLUTAMA; ?>/contact">Contact Us</a>
                 </div>
             </div>
         </div>

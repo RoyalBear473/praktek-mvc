@@ -13,28 +13,28 @@
                 </div>
                 <div class="modal-body">
 
-                <form action="#" method="post">
-                    <label for="inputJudul" class="form-label">Judul Buku</label>
-                    <input type="text" id="inputJudul" class="form-control">
+                <form action="<?= URLUTAMA; ?>/buku/tambah" method="post">
+                    <label for="judul" class="form-label">Judul Buku</label>
+                    <input type="text" id="judul" class="form-control" name="judul">
 
-                    <label for="inputKodeBuku" class="form-label">Kode Buku</label>
-                    <input type="text" id="inputKodeBuku" class="form-control">
+                    <label for="kode" class="form-label">Kode Buku</label>
+                    <input type="text" id="kode" class="form-control" name="kode">
 
-                    <label for="inputPengarang" class="form-label">Pengarang</label>
-                    <input type="text" id="inputPengarang" class="form-control">
+                    <label for="pengarang" class="form-label">Pengarang</label>
+                    <input type="text" id="pengarang" class="form-control" name="pengarang">
 
-                    <label for="inputPenerbit" class="form-label">Penerbit</label>
-                    <input type="text" id="inputPenerbit" class="form-control">
+                    <label for="penerbit" class="form-label">Penerbit</label>
+                    <input type="text" id="penerbit" class="form-control" name="penerbit">
 
-                    <label for="inputTahun" class="form-label">Tahun Terbit</label>
-                    <input type="text" id="inputTahun" class="form-control">
+                    <label for="tahun" class="form-label">Tahun Terbit</label>
+                    <input type="text" id="tahun" class="form-control" name="tahun">
+                    
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
+                    </div>
                 </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Tambah</button>
-                </div>
             </div>
         </div>
     </div>
