@@ -29,7 +29,7 @@
                     <label for="tahun" class="form-label">Tahun Terbit</label>
                     <input type="text" id="tahun" class="form-control" name="tahun">
 
-                    <input type="hidden" name="id">
+                    <input type="hidden" name="id" id="id">
                     
                 </div>
                     <div class="modal-footer">
