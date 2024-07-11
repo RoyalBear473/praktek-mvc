@@ -28,6 +28,8 @@
 
                     <label for="tahun" class="form-label">Tahun Terbit</label>
                     <input type="text" id="tahun" class="form-control" name="tahun">
+
+                    <input type="hidden" name="id">
                     
                 </div>
                     <div class="modal-footer">
@@ -40,10 +42,10 @@
     </div>
 
 <!-- menampilkan data -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-1">
         <?php foreach ($data['buku'] as $buku): ?>
             <div class="col">
-                <div class="card">
+                <div class="card w-100">
                     <img src='' class="card-img-top" alt="<?= $buku['judul'] ?>">
                     <div class="card-body">
                         <h3 class="card-title"><?= $buku['judul'] ?></h3>
@@ -51,6 +53,14 @@
                         <p class="card-text"><?= $buku['kode_buku'] ?></p>
                         <p class="card-text"><?= $buku['penerbit'] ?></p>
                         <p class="card-text"><?= $buku['tahun_terbit'] ?></p>
+                        <div class="container d-flex flex-row justify-content-between">
+                            <form action="<?= URLUTAMA; ?>/buku/delete" method="post">
+                                <button class="btn btn-danger" onclick="return confirm('ingin menghapus buku ini?')">Delete</button>
+                            </form>
+                            <form action="<?= URLUTAMA; ?>/buku/update" method="post">
+                                <button class="btn btn-primary" >update</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -18,4 +18,15 @@ class Buku extends Controller{
             exit;
         }
     }
+    public function delete($id){
+        if($this->model('buku_model')->deleteDataBuku($id) > 0){
+            // FLASHER::setFlash('berhasil', 'didelete', 'success');
+            header('Location: ' . URLUTAMA . '/buku');
+            exit;
+        }else{
+            // FLASHER::setFlash('gagal', 'didelete', 'warning');
+            header('Location: ' . URLUTAMA . '/buku');
+            exit;
+        }
+    }
 }

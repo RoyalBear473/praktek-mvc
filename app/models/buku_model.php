@@ -6,6 +6,12 @@ class buku_model{
     public function __construct(){
         $this->db = new Database;
     }
+    public function getBukuById($id){
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id = :id');
+        $this->db->bind(':id' , $id);
+        return $this->db->single();
+    }
+
     public function getAllBuku(){
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();  
@@ -21,5 +27,12 @@ class buku_model{
         $this->db->bind(':tahun' , $data['tahun']);
         $this->db->execute();
         return $this->db->rowCount();
+    }
+    public function deleteDataBuku(){ 
+        $query = "DELETE FROM `buku` WHERE `id`=:id";
+        $this->db->query($query);
+        $this->db->bind('id' , $id);
+        $this->db->execute();
+        return $this->db->rowCount(); 
     }
 }
