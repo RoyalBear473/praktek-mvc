@@ -8,7 +8,7 @@
         <div class="modal-dialog ">
             <div class="modal-content bg-light-subtle">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Buku</h1>
+                    <h1 class="modal-title fs-5" id="judulModalTambah" name="judulModalTambah">Tambah Data Buku</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -34,7 +34,7 @@
                 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary" >Tambah</button>
                     </div>
                 </form>
             </div>
@@ -57,8 +57,8 @@
                             <form action="<?= URLUTAMA; ?>/buku/delete/<?= $buku['id'];?>" method="post">
                                 <button class="btn btn-danger" onclick="return confirm('ingin menghapus buku ini?')">Delete</button>
                             </form>
-                            <form action="<?= URLUTAMA; ?>/buku/update" method="post">
-                                <button class="btn btn-primary" >update</button>
+                            <form action="<?= URLUTAMA; ?>/buku/update/<?= $buku['id'];?>" method="post">
+                                <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal">update</button>
                             </form>
                         </div>
                     </div>

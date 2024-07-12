@@ -1,23 +1,24 @@
 $(function () {
   $(".tombolTambah").on("click", function () {
-    $("#judulModalLabel").html("Tambah Data");
+    $("#judulModalTambah").html("Tambah Data");
     $(".modal-footer button[type=submit]").html("tambah data");
-    $("#nama").val("");
-    $("#absen").val("");
-    $("#email").val("");
-    $("#jurusan").val("");
+    $("#judul").val("");
+    $("#kode").val("");
+    $("#pengarang").val("");
+    $("#penerbit").val("");
+    $("#tahun").val("");
   });
 
-  $(".editDataMhs").on("click", function () {
-    $("#judulModalLabel").html("Update Data");
+  $(".editBuku").on("click", function () {
+    $("#judulModalTambah").html("Update Data");
     $(".modal-footer button[type=submit]").html("ubah data");
     $(".modal-body form").attr(
       "action",
-      "http://localhost/learnmvc/public/mahasiswa/update"
+      "http://localhost/praktekmvc1/public/buku/update"
     );
     const id = $(this).data("id");
     $.ajax({
-      url: "http://localhost/learnmvc/public/mahasiswa/getubah",
+      url: "http://localhost/praktekmvc1/public/buku/getubah",
       data: { id: id },
       method: "post",
       dataType: "json",
