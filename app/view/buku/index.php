@@ -54,7 +54,7 @@
                         <p class="card-text"><?= $buku['penerbit'] ?></p>
                         <p class="card-text"><?= $buku['tahun_terbit'] ?></p>
                         <div class="container d-flex flex-row justify-content-between">
-                            <form action="<?= URLUTAMA; ?>/buku/delete" method="post">
+                            <form action="<?= URLUTAMA; ?>/buku/delete/<?= $buku['id'];?>" method="post">
                                 <button class="btn btn-danger" onclick="return confirm('ingin menghapus buku ini?')">Delete</button>
                             </form>
                             <form action="<?= URLUTAMA; ?>/buku/update" method="post">
