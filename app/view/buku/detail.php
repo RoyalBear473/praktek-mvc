@@ -1,4 +1,3 @@
-
 <div class="container mt-5">
     <div class="card">
         <div class="card-body">
@@ -7,11 +6,11 @@
             <p class="card-text"><?= $data['buku']['pengarang']?></p>
             <p class="card-text"><?= $data['buku']['penerbit']?></p>
             <p class="card-text"><?= $data['buku']['tahun_terbit']?></p>
-            <p class="card-text"> buku ini berjudul <?= $data['buku']['judul']?> , dikarang oleh <?= $data['buku']['pengarang']?> 
+            <p class="card-text"> buku ini berjudul <strong><?= $data['buku']['judul']?></strong> , dikarang oleh <?= $data['buku']['pengarang']?> 
                 dan diterbitkan oleh <?= $data['buku']['penerbit']?> pada tahun <?= $data['buku']['tahun_terbit']?>, sekian informasi 
                 tentang buku tersebut, untuk sinopsis masih tidak tersedia :)</p>
             <form action="<?= URLUTAMA;?>/buku" method="post">
-                <button class="btn btn-danger" type="button">Back</button>
+                <button class="btn btn-danger" type="submit">Back</button>
             </form>
         </div>
     </div>
