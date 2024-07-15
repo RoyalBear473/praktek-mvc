@@ -18,11 +18,11 @@ class Buku extends Controller{
 
     public function tambah(){
         if($this->model('buku_model')->tambahDataBuku($_POST) > 0){
-            // FLASHER::setFlash('berhasil', 'ditambahkan', 'success');
+            FLASH::setFlash('berhasil', 'ditambahkan', 'success');
             header('Location: ' . URLUTAMA . '/buku');
             exit;
         }else{
-            // FLASHER::setFlash('gagal', 'ditambahkan', 'warning');
+            FLASH::setFlash('gagal', 'ditambahkan', 'warning');
             header('Location: ' . URLUTAMA . '/buku');
             exit;
         }
@@ -30,11 +30,11 @@ class Buku extends Controller{
 
     public function delete($id){
         if($this->model('buku_model')->deleteDataBuku($id) > 0){
-            // FLASHER::setFlash('berhasil', 'didelete', 'success');
+            FLASH::setFlash('berhasil', 'didelete', 'success');
             header('Location: ' . URLUTAMA . '/buku');
             exit;
         }else{
-            // FLASHER::setFlash('gagal', 'didelete', 'warning');
+            FLASH::setFlash('gagal', 'didelete', 'warning');
             header('Location: ' . URLUTAMA . '/buku');
             exit;
         }
