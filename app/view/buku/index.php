@@ -57,8 +57,11 @@
                             <form action="<?= URLUTAMA; ?>/buku/delete/<?= $buku['id'];?>" method="post">
                                 <button class="btn btn-danger" onclick="return confirm('ingin menghapus buku ini?')">Delete</button>
                             </form>
+                            <form action="<?= URLUTAMA; ?>/buku/detail/<?= $buku['id'];?>" method="post">
+                                <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal">Detail</button>
+                            </form>
                             <form action="<?= URLUTAMA; ?>/buku/update/<?= $buku['id'];?>" method="post">
-                                <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal">update</button>
+                                <button class="btn btn-secondary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal">Update</button>
                             </form>
                         </div>
                     </div>
