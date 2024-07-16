@@ -5,9 +5,15 @@
         </div>
     </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#formModal">
-    tambah buku
-    </button>
+    <div class="container d-flex justify-content-between">
+        <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#formModal">
+            tambah buku
+        </button>
+        <div class="input-group w-50 m-2">
+          <input type="text" class="form-control" placeholder="Cari Mahasiswa" name="keyword" id="keyword" autocomplete="off" >
+          <button class="btn btn-outline-primary" type="submit" id="tombolCari">Search</button>
+        </div>
+    </div>
     <!--modal body untuk form-->
     <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog ">
@@ -65,9 +71,9 @@
                             <form action="<?= URLUTAMA; ?>/buku/detail/<?= $buku['id'];?>" method="post">
                                 <button class="btn btn-secondary">Detail</button>
                             </form>
-                            <form action="<?= URLUTAMA; ?>/buku/update/<?= $buku['id'];?>" method="post">
-                                <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?=$buku['id'];?>">Update</button>
-                            </form>
+                            <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?=$buku['id'];?>">
+                                Update
+                            </button>
                         </div>
                     </div>
                 </div>
