@@ -10,7 +10,7 @@
             tambah buku
         </button>
         <div class="input-group w-50 m-2">
-          <input type="text" class="form-control" placeholder="Cari Mahasiswa" name="keyword" id="keyword" autocomplete="off" >
+          <input type="text" class="form-control" placeholder="Cari Buku" name="keyword" id="keyword" autocomplete="off" >
           <button class="btn btn-outline-primary" type="submit" id="tombolCari">Search</button>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="modal-dialog ">
             <div class="modal-content bg-light-subtle">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="judulModalTambah" name="judulModalTambah">Tambah Data Buku</h1>
+                    <h1 class="modal-title fs-5" id="judulModal" name="judulModal">Tambah Data Buku</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -71,7 +71,7 @@
                             <form action="<?= URLUTAMA; ?>/buku/detail/<?= $buku['id'];?>" method="post">
                                 <button class="btn btn-secondary">Detail</button>
                             </form>
-                            <button class="btn btn-primary" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?=$buku['id'];?>">
+                            <button class="btn btn-primary editBuku" id="updateBuku"  data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?=$buku['id'];?>">
                                 Update
                             </button>
                         </div>

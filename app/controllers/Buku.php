@@ -39,5 +39,7 @@ class Buku extends Controller{
             exit;
         }
     }
-
+    public function getubah(){
+        echo json_encode($this->model('buku_model')->getBukuById($_POST['id']));
+    }
 }
