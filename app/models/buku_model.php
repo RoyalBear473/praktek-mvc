@@ -35,4 +35,15 @@ class buku_model{
         $this->db->execute();
         return $this->db->rowCount(); 
     }
+    public function updateDataBuku($data){
+        $query = "UPDATE " . $this->table . " SET judul = :judul , kode_buku = :kode , pengarang = :pengarang , penerbit = :penerbit , tahun_terbit = :tahun";
+        $this->db->query($query);
+        $this->db->bind(':judul' , $data['judul']);
+        $this->db->bind(':kode' , $data['kode']);
+        $this->db->bind(':pengarang' , $data['pengarang']);
+        $this->db->bind(':penerbit' , $data['penerbit']);
+        $this->db->bind(':tahun' , $data['tahun']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
 }

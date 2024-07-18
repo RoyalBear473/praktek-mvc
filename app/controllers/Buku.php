@@ -42,4 +42,15 @@ class Buku extends Controller{
     public function getubah(){
         echo json_encode($this->model('buku_model')->getBukuById($_POST['id']));
     }
+    public function update(){
+        if ($this->model('buku_model')->updateDataBuku($_POST) > 0){
+            FLASH::setFlash('berhasil', 'diupdate', 'success');
+            header('Location: ' . URLUTAMA . '/buku');
+            exit;
+        }else{
+            FLASH::setFlash('gagal', 'diupdate', 'warning');
+            header('Location: ' . URLUTAMA . '/buku');
+            exit;
+        }
+    }
 }
